@@ -26,6 +26,7 @@ dependencies = [
     "plotnine>=0.14.5",
     "pandas>=2.2.3",
     "adjusttext>=1.3.0",
+    "statsmodels>=0.14.4",
 ]
 
 [dependency-groups]
@@ -36,3 +37,8 @@ packages = ["solib"]
 
 [tool.pytest.ini_options]
 addopts="-p no:logging"
+
+[tool.uv]
+override-dependencies = [
+    "bitsandbytes; sys_platform != 'darwin'"
+]
